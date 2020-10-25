@@ -32,7 +32,8 @@ public class Vector {
 
         return (a.x == b.x && a.y == b.y) || (a.x == -b.x && a.y == -b.y);
     }
-
+    
+    // This is incorrect. This makes t a determining factor which is incorrect.
     public boolean willIntersect(Vector v) {
         Vector a = this.normalized();
         Vector b = v.normalized();
