@@ -23,6 +23,8 @@ class Main {
 
 		canvas.createBufferStrategy(2);
 
+		game = new Game();
+
 		long now = System.nanoTime(), lastLoop = now;
 		final long loopTime = 1000000000 / 60;
 		while (running) {

@@ -12,13 +12,21 @@ public class Ray {
         }
         
         Vector slope = line.getParametricSlope();
-        if (!slope.willIntersect(direction)) {
+        if (slope.parallel(direction)) {
             return null;
         }
-        
-        // This is incorrect
-        final float x = direction.x * (line.start.x - position.x) / (direction.x - slope.x) + position.x;
-        final float y = direction.y * (line.start.y - position.y) / (direction.y - slope.y) + position.y;
-        return new Vector(x, y);
+
+        if (slope.x == 0) {
+            // Vertical and non vertical
+        } else if (slope.y == 0) {
+            //
+
+        } else if (direction.x == 0) {
+
+        } else if (direction.y == 0) {
+
+        } else {
+
+        }
     }
 }
