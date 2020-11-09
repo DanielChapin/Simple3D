@@ -11,7 +11,20 @@ public class Ray {
             return position;
         }
         
-        const float x1 = line.position.x, y1 = line.position.y;
-        const float x2 = l
+        final float x1 = position.x, y1 = position.y;
+        final float x2 = x1 + direction.x, y2 = y1 + direction.y;
+        final float x3 = line.start.x, y3 = line.start.y;
+        final float x4 = line.finish.x, y4 = line.finish.y;
+
+        final float denominator = (x1 - x2) * (y3 - y4) - (y1 - y2) * (x3 - x4);
+        if (denominator == 0) {
+            return null;
+        }
+        
+        final float t = ((x1 - x3) * (y3 - y4) - (y1 - y3) * (x3 - x4)) / denominator;
+        final float x = position.x + t * direction.x;
+        final float y = position.y + t * direction.y;
+
+        return new Vector(x, y);
     }
 }
