@@ -25,6 +25,10 @@ public class Vector {
         return (float) Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
     }
 
+    public float distanceTo(Vector v) {
+        return (float) Math.sqrt(Math.pow(x - v.x, 2) + Math.pow(y - v.y, 2));
+    }
+
     public Vector normalized() {
         Vector v = new Vector(this);
         v.scale(1.0f / length());

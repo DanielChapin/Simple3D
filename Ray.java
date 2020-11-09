@@ -27,4 +27,12 @@ public class Ray {
 
         return new Vector(x, y);
     }
+
+    public float distanceTo(LineSegment line) {
+        Vector intersection = getIntersection(line);
+        if (intersection == null) {
+            return -1;
+        }
+        return intersection.distanceTo(position);
+    }
 }
