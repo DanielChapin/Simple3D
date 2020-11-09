@@ -11,22 +11,7 @@ public class Ray {
             return position;
         }
         
-        Vector slope = line.getParametricSlope();
-        if (slope.parallel(direction)) {
-            return null;
-        }
-
-        if (slope.x == 0) {
-            // Vertical and non vertical
-        } else if (slope.y == 0) {
-            //
-
-        } else if (direction.x == 0) {
-
-        } else if (direction.y == 0) {
-
-        } else {
-
-        }
+        const float x1 = line.position.x, y1 = line.position.y;
+        const float x2 = l
     }
 }
