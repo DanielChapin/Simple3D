@@ -1,8 +1,13 @@
 import java.awt.Graphics;
+import java.awt.Canvas;
+import javax.swing.JFrame;
 
 public class Game {
 
-    public Game() {
+    JFrame frame;
+    Canvas canvas;
+
+    public Game(JFrame frame, Canvas canvas) {
         LineSegment testLine = new LineSegment(new Vector(0, 10), new Vector(10, 10));
         Ray testRay = new Ray(new Vector(5, 0), new Vector(0, 1));
         Vector intersection = testRay.getIntersection(testLine);
