@@ -1,9 +1,15 @@
 public class Ray {
+
     Vector position, direction;
 
     public Ray(Vector position, Vector direction) {
         this.position = position;
         this.direction = direction.normalized();
+    }
+
+    public void pointTo(Vector location) {
+        direction.x = location.x - position.x;
+        direction.y = location.y - position.y;
     }
 
     public Vector getIntersection(LineSegment line) {
@@ -35,4 +41,5 @@ public class Ray {
         }
         return intersection.distanceTo(position);
     }
+
 }
