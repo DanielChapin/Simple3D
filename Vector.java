@@ -6,6 +6,11 @@ public class Vector {
         this.y = y;
     }
 
+    public Vector(float theta) {
+        x = (float) Math.cos(theta);
+        y = (float) Math.sin(theta);
+    }
+
     public Vector(Vector v) {
         x = v.x;
         y = v.y;
