@@ -26,6 +26,23 @@ public class Vector {
         y *= factor;
     }
 
+    public Vector scaled(float factor) {
+        Vector vec = new Vector(this);
+        vec.scale(factor);
+        return vec;
+    }
+
+    public void rotate(float theta) {
+        x = (float) (x * Math.cos(theta));
+        y = (float) (y * Math.sin(theta));
+    }
+
+    public Vector rotated(float theta) {
+        Vector vec = new Vector(this);
+        vec.rotate(theta);
+        return vec;
+    }
+
     public float length() {
         return (float) Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
     }
