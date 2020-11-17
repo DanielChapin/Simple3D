@@ -4,6 +4,10 @@ public class Boundary extends LineSegment {
 
     private Color color;
 
+    public Boundary(Vector start, Vector finish) {
+        this(start, finish, Color.white);
+    }
+
     public Boundary(Vector start, Vector finish, Color color) {
         super(start, finish);
         this.color = color;
@@ -16,4 +20,5 @@ public class Boundary extends LineSegment {
     public void setColor(Color color) {
         this.color = color;
     }
+    
 }
