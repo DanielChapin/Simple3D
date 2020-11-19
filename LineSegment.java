@@ -1,4 +1,5 @@
 public class LineSegment {
+    
     public Vector start, finish;
 
     public LineSegment(Vector start, Vector finish) {
@@ -27,4 +28,5 @@ public class LineSegment {
 
         return false;
     }
+
 }
