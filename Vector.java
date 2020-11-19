@@ -39,6 +39,17 @@ public class Vector {
         return vec;
     }
 
+    public void scale(Vector scale) {
+        x *= scale.x;
+        y *= scale.y;
+    }
+
+    public Vector scaled(Vector scale) {
+        Vector vector = new Vector(this);
+        vector.scale(scale);
+        return vector;
+    }
+
     public void rotate(float theta) {
         x = (float) (x * Math.cos(theta));
         y = (float) (y * Math.sin(theta));
