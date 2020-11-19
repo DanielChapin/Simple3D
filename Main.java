@@ -52,7 +52,7 @@ class Main {
 		g.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
 
 		// Render
-		game.render(deltaTime, g);
+		game.render(g);
 
 		// Clean up and swap buffers
 		g.dispose();
