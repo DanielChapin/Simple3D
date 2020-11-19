@@ -6,9 +6,12 @@ public class Vector {
         this.y = y;
     }
 
-    public Vector(float theta) {
-        x = (float) Math.cos(theta);
-        y = (float) Math.sin(theta);
+    public Vector(float x) {
+        this(x, x);
+    }
+
+    public static Vector fromAngle(float theta) {
+        return new Vector((float) Math.cos(theta), (float) Math.sin(theta));
     }
 
     public Vector(Vector v) {
