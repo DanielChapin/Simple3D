@@ -14,8 +14,10 @@ public class Vector {
         return new Vector((float) Math.cos(theta), (float) Math.sin(theta));
     }
 
-    public static Vector random(float xMax, float yMax) {
-        return new Vector((float) (Math.random() * xMax), (float) (Math.random() * yMax));
+    public static Vector random(float xMin, float xMax, float yMin, float yMax) {
+        float xRange = xMax - xMin;
+        float yRange = yMax - yMin;
+        return new Vector(xMin + (float) (Math.random() * xRange), yMin + (float) (Math.random() * yRange));
     }
 
     public Vector(Vector v) {
