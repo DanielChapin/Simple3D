@@ -43,6 +43,27 @@ public class Vector {
         return vec;
     }
 
+    public void translate(float x, float y) {
+        this.x += x;
+        this.y += y;
+    }
+
+    public Vector translated(float x, float y) {
+        Vector vector = new Vector(this);
+        vector.translate(x, y);
+        return vector;
+    }
+
+    public void translate(Vector translation) {
+        translate(translation.x, translation.y);
+    }
+
+    public Vector translated(Vector translation) {
+        Vector vector = new Vector(this);
+        vector.translate(translation);
+        return vector;
+    }
+
     public float length() {
         return (float) Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
     }
